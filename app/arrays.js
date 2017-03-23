@@ -56,7 +56,10 @@ exports.arraysAnswers = {
   },
 
   square: function (arr) {
-
+    var squareArr = arr.map(function (val) {
+      return val * val
+    })
+    return squareArr
   },
 
   findAllOccurrences: function (arr, target) {
