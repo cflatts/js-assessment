@@ -2,7 +2,7 @@ exports = typeof window === 'undefined' ? global : window
 
 exports.arraysAnswers = {
   indexOf: function (arr, item) {
-
+    return arr.indexOf(item)
   },
 
   sum: function (arr) {
@@ -10,7 +10,6 @@ exports.arraysAnswers = {
   },
 
   remove: function (arr, item) {
-
   },
 
   removeWithoutCopy: function (arr, item) {
