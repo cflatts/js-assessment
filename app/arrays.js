@@ -13,6 +13,10 @@ exports.arraysAnswers = {
   },
 
   remove: function (arr, item) {
+    var cleanArr = arr.filter(function (val) {
+      return val !== item
+    })
+    return cleanArr
   },
 
   removeWithoutCopy: function (arr, item) {
