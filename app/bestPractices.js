@@ -12,7 +12,6 @@ exports.bestPracticesAnswers = {
     myObject = {
       name: 'Jory'
     };
-
     return myObject;
   },
 
