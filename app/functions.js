@@ -34,8 +34,10 @@ exports.functionsAnswers = {
     }
   },
 
-  useArguments: function () {
-
+  useArguments: function (...args) {
+    return args.reduce(function (acc, val) {
+      return acc + val
+    })
   },
 
   callIt: function (fn) {
