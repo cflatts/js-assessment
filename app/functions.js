@@ -49,6 +49,12 @@ exports.functionsAnswers = {
   },
 
   curryIt: function (fn) {
-
+    return function (x) {
+      return function (y) {
+        return function (z) {
+          return fn(x, y, z)
+        }
+      }
+    }
   }
 }
