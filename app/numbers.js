@@ -16,6 +16,7 @@ exports.numbersAnswers = {
   },
 
   multiply: function (a, b) {
-
+    var num = a * b
+    return parseFloat(num.toPrecision(1), 10)
   }
 }
