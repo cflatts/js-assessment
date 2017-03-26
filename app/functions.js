@@ -34,7 +34,8 @@ exports.functionsAnswers = {
     }
   },
 
-  useArguments: function (...args) {
+  useArguments: function () {
+    var args = Array.prototype.slice.call(arguments)
     return args.reduce(function (acc, val) {
       return acc + val
     })
