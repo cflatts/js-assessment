@@ -69,7 +69,18 @@ exports.arraysAnswers = {
   },
 
   duplicates: function (arr) {
-
+    var dupesArr = []
+    var newObj = {}
+    arr.forEach(function (val) {
+      if (newObj[val] === undefined) {
+        newObj[val] = 1
+      } else {
+        if (dupesArr.indexOf(val) === -1) {
+          dupesArr.push(val)
+        }
+      }
+    })
+    return dupesArr
   },
 
   square: function (arr) {
