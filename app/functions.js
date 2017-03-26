@@ -48,8 +48,11 @@ exports.functionsAnswers = {
     return fn.apply({}, args)
   },
 
-  partialUsingArguments: function (fn) {
-
+  partialUsingArguments: function (fn, ...args) {
+    return function (...args2) {
+      var newArgs = args.concat(args2)
+      return fn(...newArgs)
+    }
   },
 
   curryIt: function (fn) {
