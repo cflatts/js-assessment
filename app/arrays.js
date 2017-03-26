@@ -74,6 +74,12 @@ exports.arraysAnswers = {
   },
 
   findAllOccurrences: function (arr, target) {
-
+    var locationArr = []
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] === target) {
+        locationArr.push(i)
+      }
+    }
+    return locationArr
   }
 }
