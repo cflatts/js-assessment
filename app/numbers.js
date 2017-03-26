@@ -2,7 +2,9 @@ exports = typeof window === 'undefined' ? global : window
 
 exports.numbersAnswers = {
   valueAtBit: function (num, bit) {
-
+    var binaryVal = num.toString(2)
+    var binLength = binaryVal.length
+    return parseInt(binaryVal[binLength - bit])
   },
 
   base10: function (str) {
