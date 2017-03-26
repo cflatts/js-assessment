@@ -11,7 +11,8 @@ exports.numbersAnswers = {
   },
 
   convertToBinary: function (num) {
-
+    var binaryVal = num.toString(2)
+    return ('0' + binaryVal).substr(-8)
   },
 
   multiply: function (a, b) {
