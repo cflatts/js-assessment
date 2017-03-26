@@ -42,7 +42,10 @@ exports.functionsAnswers = {
   },
 
   callIt: function (fn) {
+    var args = Array.prototype.slice.call(arguments)
+    args.shift()
 
+    return fn.apply({}, args)
   },
 
   partialUsingArguments: function (fn) {
