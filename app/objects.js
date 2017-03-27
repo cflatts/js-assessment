@@ -10,6 +10,17 @@ exports.objectsAnswers = {
   },
 
   iterate: function (obj) {
-
+    var propArr = []
+    var propName = Object.getOwnPropertyNames(obj)
+    for (var props in obj) {
+      var propStr = ''
+      propName.map(function (val) {
+        if (val === props) {
+          propStr = props + ': ' + obj[props]
+          propArr.push(propStr)
+        }
+      })
+    }
+    return propArr
   }
 }
