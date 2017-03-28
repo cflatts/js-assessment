@@ -2,6 +2,7 @@ exports = typeof window === 'undefined' ? global : window
 
 exports.regexAnswers = {
   containsNumber: function (str) {
+    // tests for any digit
     var regEx = /\d/
     return regEx.test(str)
   },
@@ -11,7 +12,8 @@ exports.regexAnswers = {
   },
 
   endsWithVowel: function (str) {
-
+    var regEx = /[aeiouAEIOU]$/
+    return regEx.test(str)
   },
 
   captureThreeNumbers: function (str) {
