@@ -9,6 +9,14 @@ exports.asyncAnswers = {
   },
 
   manipulateRemoteData: function (url) {
-
+    return $.getJSON(url).then(function (obj) {
+      var nameArr = []
+      for (var props in obj.people) {
+        nameArr.push(obj.people[props].name)
+      }
+      // sort the names alphabetically
+      nameArr.sort()
+      return nameArr
+    })
   }
 }
