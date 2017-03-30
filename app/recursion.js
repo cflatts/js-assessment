@@ -32,19 +32,14 @@ exports.recursionAnswers = {
   },
 
   fibonacci: function (n) {
-    // var fibbNum = 1
-    // var i = 1
-    // function fibb (x, y) {
-    //   while (i <= n) {
-    //     fibbNum = x + y
-    //     console.log(i)
-    //     i++
-    //   }
-    //   x = y
-    //   return fibb(x, x + y)
-    // }
-    // fibb(0, 1)
-    // return fibbNum
+    function fibbCreator (x, y, n) {
+      if (n > 1) {
+        return fibbCreator(y, x + y, n - 1)
+      } else {
+        return y
+      }
+    }
+    return fibbCreator(0, 1, n)
   },
 
   validParentheses: function (n) {
