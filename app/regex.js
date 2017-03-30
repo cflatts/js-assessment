@@ -9,8 +9,10 @@ exports.regexAnswers = {
 
   containsRepeatingLetter: function (str) {
     for (var i = 0; i < str.length; i++) {
+      // test to make sure that the string is letters
       var regExLetter = /[a-zA-Z]/
       if (regExLetter.test(str.charAt(i))) {
+        // adds changing string variable to regex
         var regEx = new RegExp(str.charAt(i) + '{2}')
         if (str.match(regEx)) {
           return regEx.test(str)
