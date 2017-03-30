@@ -8,7 +8,10 @@ exports.regexAnswers = {
   },
 
   containsRepeatingLetter: function (str) {
-
+    for (var i = 0; i < str.length; i++) {
+      var char = str[i]
+      var regEx = new RegExp(char + '{2}')
+    }
   },
 
   endsWithVowel: function (str) {
@@ -18,7 +21,13 @@ exports.regexAnswers = {
   },
 
   captureThreeNumbers: function (str) {
+    var regEx = /\d{3}/
 
+    if (regEx.exec(str)) {
+      return regEx.exec(str)[0]
+    } else {
+      return false
+    }
   },
 
   matchesPattern: function (str) {
