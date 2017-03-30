@@ -8,10 +8,10 @@ exports.regexAnswers = {
   },
 
   containsRepeatingLetter: function (str) {
-    for (var i = 0; i < str.length; i++) {
-      var char = str[i]
-      var regEx = new RegExp(char + '{2}')
-    }
+    // for (var i = 0; i < str.length; i++) {
+    //   var char = str[i]
+    //   var regEx = new RegExp(char + '{2}')
+    // }
   },
 
   endsWithVowel: function (str) {
@@ -39,6 +39,7 @@ exports.regexAnswers = {
   },
 
   isUSD: function (str) {
-
+    var regEx = /^\$\d{1,3}((,\d{3})?)+(\.\d{2})?$/
+    return regEx.test(str)
   }
 }
