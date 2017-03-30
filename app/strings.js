@@ -19,25 +19,25 @@ exports.stringsAnswers = {
   },
 
   wordWrap: function (str, cols) {
-    // console.log(str)
-    // console.log(cols)
-    // var tempArr = []
-    // var charArr = str.split('')
-    // var breakPoint = cols - 1
-    // for (var i = 0; i < charArr.length; i++) {
-    //   var tempStr = ''
-    //   var strLength = tempStr.length
-    //   console.log('string length', strLength)
-    //   if (charArr[breakPoint] === '') {
-    //     tempArr.push(tempStr)
-    //     tempStr = ''
-    //   } else {
-    //     console.log('temporary string', tempStr)
-    //     tempStr = tempStr + charArr[i]
-    //   }
-    // }
-    // console.log('returned array value', tempArr)
-    // return tempArr
+    var formattedStr = ''
+    var wordsArr = []
+
+    wordsArr = str.split(' ')
+    formattedStr = wordsArr[0]
+
+    for (var i = 1; i < wordsArr.length; i++) {
+      if (wordsArr[i].length > cols) {
+        formattedStr += '\n' + wordsArr[i]
+      } else {
+        if (formattedStr.length + wordsArr[i].length > cols) {
+          formattedStr += '\n' + wordsArr[i]
+        } else {
+          formattedStr += ' ' + wordsArr[i]
+        }
+      }
+    }
+
+    return formattedStr
   },
 
   reverseString: function (str) {
